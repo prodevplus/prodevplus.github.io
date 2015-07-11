@@ -1,411 +1,478 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-<title>Prodevplus | Home :: prodevplus</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!--<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<script src="js/bootstrap.min.js"></script>-->
-<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-</script>
-<!----webfonts---->
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
-<!----//webfonts---->
-<!----//requred-js-files---->
-<script src="js/easing.js"></script>
-	<script type="text/javascript" 	src="js/jquery.smint.js"></script>
+	<head>
+		<title>PRODEVPLUS | Real Productive Devlopment for Prosparity !</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		 <!-- Custom Theme files -->
+		 <!---- animated-css ---->
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/wow.min.js"></script>
+		<script>
+		 new WOW().init();
+		</script>
+		<!---- animated-css ---->
+		  <!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
 		<script type="text/javascript">
-			$(document).ready( function() {
-			    $('.subMenu').smint({
-			    	'scrollSpeed' : 1000
-			    });
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
 			});
-		</script>	
-</head>
-<body>
-	<div class="header">
-		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/></a>
-		</div>
-	    <div class="slider_container sTop">
-  		<div class="wmuSlider example1">
-			   <div class="wmuSliderWrapper">
-				   <article style="position: absolute; width: 100%; opacity: 0;"> 
-				   	 <div class="banner-wrap">
-				   		 <div class="slider-left">
-						    <h1>Never Stop Photographing</h1>
-							<p class="top_desc">It Is very likely that your best photograph has not yet been captured</p>
-							<p class="bottom_desc">- imperdiet doming</p>
-						 </div>
-					 </div>
-					</article>
-				   <article style="position: relative; width: 100%; opacity: 1;"> 
-				   	 <div class="banner-wrap">
-				   		 <div class="slider-left">
-						    <h1>dolore eu feugiat nulla</h1>
-							<p class="top_desc">It Is very likely that your best photograph has not yet been captured</p>
-							<p class="bottom_desc">- imperdiet doming</p>
-						 </div>
-					 </div>
-				   </article>
-				   <article style="position: absolute; width: 100%; opacity: 0;">
-				   	 <div class="banner-wrap">
-				   		 <div class="slider-left">
-						    <h1>seacula quarta decima</h1>
-							<p class="top_desc">It Is very likely that your best photograph has not yet been captured</p>
-							<p class="bottom_desc">- imperdiet doming</p>
-						 </div>
-					 </div>
-				   </article>
+		</script>
+		 <!---- start-smoth-scrolling---->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----webfonts--->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!---//webfonts--->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
+	</head>
+	<body>
+		<div class="bg">
+		<!----- start-header---->
+			<div id="home" class="header wow bounceInDown" data-wow-delay="0.4s">
+					<div class="top-header">
+						<div class="container">
+						<div class="logo">
+							<a href="#"><img src="images/logo.png" title="PRODEVPLUS" /></a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li class="active"><a href="#home" class="scroll">Home</a></li>
+								<li><a href="#services" class="scroll">Services</a></li>
+								<li><a href="#port" class="scroll">Portfolio</a></li>
+								<li><a href="#about" class="scroll">About Us</a></li>
+								<li><a href="#team" class="scroll">Team</a></li>
+								<li><a href="#contact" class="scroll">Contact</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
 				</div>
-                <ul class="wmuSliderPagination">
-                	<li><a href="#" class="">0</a></li>
-                	<li><a href="#" class="">1</a></li>
-                	<li><a href="#" class="">2</a></li>
-                </ul>
-                <div class="header_btn"><a class="btn2" href="#"><span>Come Closer</span></a></div>
-              </div>
-              <script src="js/jquery.wmuSlider.js"></script> 
-				 <script>
-       			   $('.example1').wmuSlider();         
-   			     </script> 	           	     
-   	     </div>    
-	</div>  
-	<nav class="subMenu navbar-custom navbar-scroll-top smint" role="navigation" style="position: absolute; top: 737px;">
-	        <div class="container">
-	            <div class="navbar-header page-scroll">
-	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-main-collapse">
-	                    <img src="images/nav-icon.png" title="drop-down-menu"> 
-	                </button>
-	            </div>
-	            <!-- Collect the nav links, forms, and other content for toggling -->
-	            <div class="navbar-collapse navbar-left navbar-main-collapse collapse" style="height: 1px;">
-	                <ul class="nav navbar-nav">
-	                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-	                    <li class="active">
-	                        <a id="sTop" class="subNavBtn active" href="#">Home</a>
-	                    </li>
-	                    <li class="page-scroll">
-	                        <a id="s1" class="subNavBtn" href="#">Portfolio</a>
-	                    </li>
-	                    <li class="page-scroll">
-	                        <a id="s2" class="subNavBtn" href="#">Services</a>
-	                    </li>
-	                    <li class="page-scroll">
-	                        <a id="s3" class="subNavBtn" href="#">Sign Up</a>
-	                    </li>
-	                   <li class="page-scroll">
-	                        <a id="s4" class="subNavBtn" href="#">About</a>
-	                    </li>
-	                    <li class="page-scroll">
-	                        <a id="s5" class="subNavBtn" href="#">Contact</a>
-	                    </li>
-	                </ul>
-	            </div>
-	            <!-- /.navbar-collapse -->
-	             	<a id="s4" class="right-msg subNavBtn msg-icon" href="#"><span> </span></a>
-	                <div class="clearfix"> </div>
-	        </div>
-	        <!-- /.container -->
-   	  </nav>
-      <div class="portfolio s1" id="portfolio">
-	  <div class="portfolio_box">
-		<div class="col_1_of_4 span_1_of_4">
-	 	   <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p1.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	    <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p2.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	    <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p3.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	   <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p4.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-	<div class="portfolio_box">
-		<div class="col_1_of_4 span_1_of_4">
-	 	   <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p5.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	    <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p6.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	    <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p7.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	   <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p8.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-	<div class="portfolio_box">
-		<div class="col_1_of_4 span_1_of_4">
-	 	   <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p9.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	    <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p10.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	    <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p11.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="col_1_of_4 span_1_of_4">
-	 	   <a href="#" class="b-link-stripe b-animate-go  thickbox">
-			<img src="images/p12.jpg" class="img-responsive" alt=""/>
-			    <div class="b-wrapper">
-				   <h2 class="b-animate b-from-left    b-delay03 ">
-					 <img src="images/p_logo.png" class="img-responsive" alt=""/>
-					 <span>Prodevplus Project title</span>
-					 <button>View photo</button>
-					 <label> <i class="heart"> </i>21</label>
-					</h2>
-				</div>
-			</a>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-   </div>
-   <div class="portfolio_bottom">
-   	 <a class="btn3" href="#"><span>Loadmore</span></a>
-   </div>
-   <div class="services s2" id="services">
-   	  <div class="container">
-   	  	<h2 class="service_head">Our Services</h2>
-   	   <div class="row text-center">
-   	    <div class="col-md-3 service_grid">
-   		  <i class="icon1"> </i>
-   		  <h3 class="m_1"><a href="#">One Page Layout</a></h3>
-   		  <p class="m_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt..</p>
-   		</div>
-   		<div class="col-md-3 service_grid">
-   		  <i class="icon2"> </i>
-   		 <h3 class="m_1"><a href="#">Flat Design</a></h3>
-   		  <p class="m_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt..</p>
-   		</div>
-   		<div class="col-md-3 service_grid">
-   		  <i class="icon3"> </i>
-   		  <h3 class="m_1"><a href="#">Photo portfolio</a></h3>
-   		  <p class="m_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt..</p>
-   		</div>
-   		<div class="col-md-3">
-   		  <i class="icon4"> </i>
-   		  <h3 class="m_1"><a href="#">Easy to edit</a></h3>
-   		  <p class="m_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt..</p>
-   		</div>
-   	  </div>
-   	  </div>
-   	</div>
-    <div class="photograph">
-   	  <div class="container">
-   		<div class="slider-left">
-		  <h1>Never Stop Photographing</h1>
-		  <p class="top_desc">It Is very likely that your best photograph has not yet been captured</p>
-		  <p class="bottom_desc">- imperdiet doming</p>
-		</div>
-   	  </div>
-   	</div>
-   	<div class="signup s3" id="signup">
-       <div class="container">
-   			<h3 class="m_3">Are you Interested ? <br> Sign up now</h3>
-   			<div class="contact-form">
-			   <form method="post" action="contact-post.html">
-				 <input type="text" class="textbox" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}">
-				 <input type="text" class="textbox" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}">
-				 <input type="text" class="textbox" value="Email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address';}">
-				 <input type="submit" value="Sign Up">
-			   </form>
 			</div>
-   		</div>
-   	</div>
-    <div class="about s4" id="about">
-   		<div class="container">
-   			<h3 class="m_4">About Us</h3>
-   			<p class="m_5">nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</p>
-   			<div class="row text-center">
-   				<div class="col-md-3 about-grid text-center">
-   				  <img src="images/pic1.png" class="img-responsive" alt=""/>
-   				  <h3><a href="#">John Doe<br>General Manager</a></h3>
-   				  <p>diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation </p>
-   				</div>
-   				<div class="col-md-3 about-grid text-center">
-   				  <img src="images/pic3.png" class="img-responsive" alt=""/>
-   				  <h3><a href="#">John Doe<br>General Manager</a></h3>
-   				  <p>diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation </p>
-   				</div>
-   				<div class="col-md-3 about-grid text-center">
-   				  <img src="images/pic2.png" class="img-responsive" alt=""/>
-   				  <h3><a href="#">John Doe<br>General Manager</a></h3>
-   				  <p>diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation </p>
-   				</div>
-   				<div class="col-md-3 about-grid text-center">
-   				  <img src="images/pic4.png" class="img-responsive" alt=""/>
-   				  <h3><a href="#">John Doe<br>General Manager</a></h3>
-   				  <p>diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation </p>
-   				</div>
-   			</div>
-   		</div>
-   	</div>
-   	<div class="contact s5" id="contact">
-   		<div class="container">
-   			<div class="row">
-   				<div class="col-md-8 contact_left">
-   					<h3>We Want to hear from you</h3>
-   					<p class="m_6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla</p>
-   					<p class="m_7">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla</p>
-   					<ul class="contact_info">
-			  	<li><i class="pin"> </i><span>Lorem ipsum dolor sit amet, consectetuer <br>adipiscing elit, sed diam nonummy nibh euismod</span></li>
-			  	<li><i class="mobile"> </i><span>Tell: +1-900-235-2456<br>Fax: +1-900-235-2456</span></li>
-			  	<li><i class="message"> </i><span class="msg">info(at)Prodevplus.com</span></li>
-			  </ul>
-   				</div>
-   				<div class="col-md-4">
-   					<div class="contact_right">
-   				<div class="contact-form_grid">
-				   <form method="post" action="contact-post.html">
-					 <input type="text" class="textbox" value="Your name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your name';}">
-					 <input type="text" class="textbox" value="Your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your email';}">
-					 <input type="text" class="textbox" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}">
-					 <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-					 <input type="submit" value="Send">
-				   </form>
-			      </div>
-   			     </div>
-   				</div>
-   			</div>
-   		</div>
-   	</div>
-   	<div class="footer">
-   		<div class="container">
-   			<div class="copy">
-		       <p>&copy; 2015 PRODEVPLUS     </div>
-		    <div class="social">	
-		      <ul>	
-			   <li class="facebook"><a href="#"><span> </span></a></li>
-			   <li class="twitter"><a href="#"><span> </span></a></li>
-			   <li class="rss"><a href="#"><span> </span></a></li>	
-			   <li class="google"><a href="#"><span> </span></a></li>			
-		     </ul>
+			<!----- //End-header---->
+			<!---- banner ---->
+			<div class="banner wow fadeIn" data-wow-delay="0.5s">
+				<div class="container">
+					<div class="banner-info text-center">
+						<h1>Build the Product of your Dreams</h1><br />
+						<span> </span>
+						<p>We are a digital agency that believes in building things that are  Meaningful, Dynamic & Productive !</p>
+					</div>
+				</div>
 			</div>
-			<div class="clearfix"></div>
-   		</div>
-   	</div>
-   	<script src="js/bootstrap.min.js"></script>
-</body>
+		</div>
+			<!---- banner ---->
+			<!--- services --->
+			<div id="services" class="services">
+				<div class="container">
+					<div class="service-head text-center">
+						<h2>Core Services</h2>
+						<span> </span>
+					</div>
+					<!--- services-grids --->
+					<div class="services-grids text-center">
+						<div class="col-md-4">
+							<div class="service-grid wow bounceIn" data-wow-delay="0.4s">
+								<span class="service-icon1"> </span>
+								<h3><a href="#">OUR OBJECTIVE</a></h3>
+								<p class="block">
+									We Believe Every One can gain a Growth & work towards Achieveing it for our all Clients! Being an I.T and Business Professional Company we strive market with Innovative Concepts, Positive Approach, Work Ethics and Integrity.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-grid wow bounceIn" data-wow-delay="0.4s">
+								<span class="service-icon2"> </span>
+								<h3><a href="#">development</a></h3>
+								<p class="block">
+									In todays Compitative market Our team comes prepared with solid knowledge, understanding of the old as-well-as latest Desktop, Web, Mobile standards and best practices Technology & Languages: Python, C#, C++, C, ASP.net, Vb.net, Java, PHP, HTML5, CSS3, XML, SQL Server, MySQL, AngularJS, Bootstrap, and few other.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-grid wow bounceIn" data-wow-delay="0.4s">
+								<span class="service-icon3"> </span>
+								<h3><a href="#">Support</a></h3>
+								<p class="block">
+									No Product is ever been problem free or easy to use to every one and so we abide all our commitments to provide a world class customer support to our clients.
+								</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!--- services-grids --->
+				</div>
+			</div>
+			<!--- services --->
+			<div class="clearfix"> </div>
+			<!--- Other Expertise ---->
+			<div id="port" class="expertise">
+				<div class="expertice-grids">
+					<div class="col-md-8 expertice-left-grid wow fadeInLeft" data-wow-delay="0.4s">
+						<div class="expertise-head">
+							<h3>Other Expertise</h3>
+							<p>Proin iaculis purus consequat sem cure  digni ssim. Donec porttitora entum suscipit  aenean rhoncus posuere odio in tincidunt consequat sem cure  digni ssim. </p>
+						</div>
+						<div class="expertise-left-inner-grids">
+							<div class="e-left-inner-grid">
+								<div class="e-left-inner-grid-left">
+									<span class="e-icon1"> </span>
+								</div>
+								<div class="e-left-inner-grid-right">
+									<h4>Custom setup</h4>
+									<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus.</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="e-left-inner-grid">
+								<div class="e-left-inner-grid-left">
+									<span class="e-icon2"> </span>
+								</div>
+								<div class="e-left-inner-grid-right">
+									<h4>Cloud control</h4>
+									<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus.</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="e-left-inner-grid">
+								<div class="e-left-inner-grid-left">
+									<span class="e-icon3"> </span>
+								</div>
+								<div class="e-left-inner-grid-right">
+									<h4>All star support team</h4>
+									<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus.</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="e-left-inner-grid">
+								<div class="e-left-inner-grid-left">
+									<span class="e-icon4"> </span>
+								</div>
+								<div class="e-left-inner-grid-right">
+									<h4>top notch security</h4>
+									<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus.</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<a class="leran-more" href="#">Learn more</a>
+					</div>
+					<div class="col-md-4 expertice-right-grid wow fadeInRight" data-wow-delay="0.4s">
+						
+					</div>
+					<div class="clearfix"> </div> 
+				</div>
+			</div>
+			<!--- Other Expertise ---->
+			<!--- portfolio ---->
+			<div class="portfolio">
+				<div class="portfolio-top">
+					<div class="col-md-8">
+						<div class="portfolio-top-left wow fadeInLeft" data-wow-delay="0.4s">
+							<h3>Amazing Portfolio</h3>
+							<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.</p>
+							<p>Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat.</p>
+							<div class="portfolio-top-left-grids">
+								<div class="portfolio-top-left-grid">
+									<div class="portfolio-top-left-grid-left">
+										<span class="p-icon1"> </span>
+									</div>
+									<div class="portfolio-top-left-grid-right">
+										<h5>Sail Away Your Worries</h5>
+										<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="portfolio-top-left-grid">
+									<div class="portfolio-top-left-grid-left">
+										<span class="p-icon2"> </span>
+									</div>
+									<div class="portfolio-top-left-grid-right">
+										<h5>All-star support team</h5>
+										<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="portfolio-top-left-grid">
+									<div class="portfolio-top-left-grid-left">
+										<span class="p-icon3"> </span>
+									</div>
+									<div class="portfolio-top-left-grid-right">
+										<h5>fully Integrated service</h5>
+										<p>Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. </p>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 portfolio-top-right-inner wow fadeInRight" data-wow-delay="0.4s">
+						<div class="portfolio-top-right">
+							
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+					<!---- portfolio-works ---->
+					<div class="portfolio-works">
+						<div class="col-md-4 portfolio-work-grid wow bounceIn" data-wow-delay="0.4s">
+							<div class="portfolio-work-grid-pic">
+								<img src="images/p1.jpg" title="name" />
+							</div>
+							<div class="portfolio-work-grid-caption">
+								<h4>Project title</h4>
+								<p>Here you can find some of our latest works,  Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. to see the details of these works just click the thumbnails below.</p>
+							</div>
+						</div>
+						<div class="col-md-4 portfolio-work-grid wow bounceIn" data-wow-delay="0.4s">
+							<div class="portfolio-work-grid-pic">
+								<img src="images/p2.jpg" title="name" />
+							</div>
+							<div class="portfolio-work-grid-caption">
+								<h4>Project title</h4>
+								<p>Here you can find some of our latest works,  Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. to see the details of these works just click the thumbnails below.</p>
+							</div>
+						</div>
+						<div class="col-md-4 portfolio-work-grid wow bounceIn" data-wow-delay="0.4s">
+							<div class="portfolio-work-grid-pic">
+								<img src="images/p3.jpg" title="name" />
+							</div>
+							<div class="portfolio-work-grid-caption">
+								<h4>Project title</h4>
+								<p>Here you can find some of our latest works,  Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. to see the details of these works just click the thumbnails below.</p>
+							</div>
+						</div>
+						<div class="col-md-4 portfolio-work-grid wow bounceIn" data-wow-delay="0.4s">
+							<div class="portfolio-work-grid-pic">
+								<img src="images/p4.jpg" title="name" />
+							</div>
+							<div class="portfolio-work-grid-caption">
+								<h4>Project title</h4>
+								<p>Here you can find some of our latest works,  Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. to see the details of these works just click the thumbnails below.</p>
+							</div>
+						</div>
+						<div class="col-md-4 portfolio-work-grid wow bounceIn" data-wow-delay="0.4s">
+							<div class="portfolio-work-grid-pic">
+								<img src="images/p5.jpg" title="name" />
+							</div>
+							<div class="portfolio-work-grid-caption">
+								<h4>Project title</h4>
+								<p>Here you can find some of our latest works,  Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. to see the details of these works just click the thumbnails below.</p>
+							</div>
+						</div>
+						<div class="col-md-4 portfolio-work-grid wow bounceIn" data-wow-delay="0.4s">
+							<div class="portfolio-work-grid-pic">
+								<img src="images/p6.jpg" title="name" />
+							</div>
+							<div class="portfolio-work-grid-caption">
+								<h4>Project title</h4>
+								<p>Here you can find some of our latest works,  Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. to see the details of these works just click the thumbnails below.</p>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!---- portfolio-works ---->
+				</div>
+			</div>
+			<!--- portfolio ---->
+			<!---- about ---->
+			<!---start-about---->
+		<div class="about" id="about">
+			<div class="wrap"> 
+				<div class="about-head">
+					<h1>About us</h1>
+					<span> </span>
+				</div>
+				<!---start-about-time-line---->
+				<div class="about-time-line">
+					<li>
+							<div class="cbp_tmicon img1"> </div>
+							<div class="cbp_tmlabel wow fadeInLeft" data-wow-delay="0.4s">
+								<h2>Website Development</h2>
+								<p>Web is Todays Real Battle-Front were daily more and more people are getting connected to the Internet ! Every great business idea is born from the launch of a well-designed website, Having a strong presence on the World Wide Web is today an inevitable, more than a requirement, especially if companies want to secure a strong position in the industry and lead its competition.</p>
+							</div>
+					</li>
+					<li>
+							<div class="cbp_tmicon1 img2"> </div>
+							<div class="cbp_tmlabel cbp_tmlabel1 wow fadeInRight" data-wow-delay="0.4s">
+								<h2>Software Design And Development</h2>
+								<p>PRODEVPLUS offers tailor made solutions to its clients to perfectly suit their as-well-as Current Market needs and keep them ahead. We offer exceptional performance and value in all our software products and services without sacrificing quality.</p>
+							</div>
+					</li><br />
+					<li>
+							<div class="cbp_tmicon2 img3"> </div>
+							<div class="cbp_tmlabel wow fadeInLeft" data-wow-delay="0.4s">
+								<h2>Mobile Apps Development</h2>
+								<p>Our developers believe in experimenting new concepts as per client demands to touch the untouch user experience and client satisfcation with greate mobile application development or end to end mobile applications. Custom mobile solution provides users with access to real-time information anytime, anywhere and on any device</p>
+							</div>
+					</li>
+					<li>
+							<div class="cbp_tmicon3 img4"> </div>
+							<div class="cbp_tmlabel cbp_tmlabel1 wow fadeInRight" data-wow-delay="0.4s">
+								<h2>Social Media Optimization</h2>
+								<p>Social media marketing programs usually center on efforts to create content that attracts many industries and companies towards you. Businesses Find More flexibility in reaching Global Clients with more option in expansion through web.</p>
+							</div>
+					</li>
+					<li>
+							<div class="cbp_tmicon4 img5"> </div>
+					</li>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+				</div>
+				<!---//End-about-time-line---->
+			<!---- about ---->
+		</div>
+			<!---- team --->
+			<div id="team" class="team-members">
+					<div class="wrap"> 
+						<div class="tm-head">
+							<h3>our amazing team</h3>
+							<p>Proin iaculis purus consequat sem cure.</p>
+						</div>
+						<div class="tm-head-grids">
+							<div class="tm-head-grid wow fadeInLeft" data-wow-delay="0.4s">
+								<img src="images/team-member1.jpg" alt="">
+								<h4>Kimberly Thompson</h4>
+								<h5>Marketer</h5>
+								<ul class="top-social-icons">
+									<li><a class="twitter" href="#"> </a></li>
+									<li><a class="facebook" href="#"> </a></li>
+									<li><a class="pin" href="#"> </a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+							<div class="tm-head-grid wow fadeInUp" data-wow-delay="0.4s">
+								<img src="images/team-member2.jpg" alt="">
+								<h4>Rico Massimo</h4>
+								<h5>Coder</h5>
+								<ul class="top-social-icons">
+									<li><a class="twitter" href="#"> </a></li>
+									<li><a class="facebook" href="#"> </a></li>
+									<li><a class="pin" href="#"> </a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+							<div class="tm-head-grid wow fadeInRight" data-wow-delay="0.4s">
+								<img src="images/team-member3.jpg" alt="">
+								<h4>Uku Mason</h4>
+								<h5>Graphic Designer</h5>
+								<ul class="top-social-icons">
+									<li><a class="twitter" href="#"> </a></li>
+									<li><a class="facebook" href="#"> </a></li>
+									<li><a class="pin" href="#"> </a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<p class="team-info">Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt proin iaculis.</p>
+					</div>
+				</div>
+			<!---- team --->
+			<!---- contact --->
+			<div id="contact" class="contact">
+				<div class="container">
+				<div class="contact-grids">
+					<div class="col-md-6">
+						<div class="contact-left wow fadeInRight" data-wow-delay="0.4s">
+							<h3>Contact Us</h3>
+							<label>Don't be shy, drop us an email and say hello! We are a really nice bunch of people :)</label>
+							<div class="contact-left-grids">
+								<div class="col-md-6">
+									<div class="contact-left-grid">
+										<p><span class="c-mobi"> </span>+91 9623039407</p>
+										<p><span class="c-twitter"> </span><a href="#">@prodevplus</a></p>
+										<p><span class="c-pluse"> </span><a href="#">plus.com/prodevplus</a></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="contact-right-grid">
+										<p><span class="c-msg"> </span><a href="mailto:hello@prodevplus.com">contact@prodevplus.com</a></p>
+										<p><span class="c-face"> </span><a href="#">facebook.com/prodevplus</a></p>
+										<p><span class="c-pin"> </span><a href="#">pinterest.com/prodevplus</a></p>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="contact-right wow fadeInLeft" data-wow-delay="0.4s">
+							<form>
+								<input type="text" class="text" value="Name..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name...';}">
+					 			<input type="text" class="text" value="Email..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email...';}">
+					 	 		<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+								<input class="wow shake" data-wow-delay="0.3s" type="submit" value="Send Message" />
+							</form>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!--- copy-right ---->
+				<div class="copy-right text-center">
+					<p>  <a href="http://www.prodevplus.com/">PRODEVPLUS</a> Copyright &copy; 2015</p>
+					<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+				</div>
+				<!--- copy-right ---->
+			</div>
+			</div>
+			<!---- contact --->
+		</div>
+		<!-- Google Tag Manager -->
+			<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TZ6K9S"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-TZ6K9S');</script>
+		<!-- End Google Tag Manager -->
+	</body>
 </html>
 
