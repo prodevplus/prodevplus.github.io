@@ -51,6 +51,18 @@
 	        		}
 	    		});
 			});
+			$(function(){
+			    var url = window.location.pathname, 
+			        urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
+			        // now grab every link from the navigation
+			        $('.top-nav li').each(function(){
+			            // and test its normalized href against the url pathname regexp
+			            if(urlRegExp.test(this.href.replace(/\/$/,''))){
+			                $(this).addClass('active');
+			            }
+			        });
+
+			});
 		</script>
 		<!----//End-top-nav-script---->
 	</head>
@@ -137,7 +149,7 @@
 			<!--- services --->
 			<div class="clearfix"> </div>
 			<!--- Other Expertise ---->
-			<div id="port" class="expertise">
+			<!-- div id="port" class="expertise">
 				<div class="expertice-grids">
 					<div class="col-md-8 expertice-left-grid wow fadeInLeft" data-wow-delay="0.4s">
 						<div class="expertise-head">
@@ -194,10 +206,10 @@
 					</div>
 					<div class="clearfix"> </div> 
 				</div>
-			</div>
-			<!--- Other Expertise ---->
-			<!--- portfolio ---->
-			<div class="portfolio">
+			</div> -->
+			<!--- Other Expertise -->
+			<!--- portfolio -->
+			<!-- <div class="portfolio">
 				<div class="portfolio-top">
 					<div class="col-md-8">
 						<div class="portfolio-top-left wow fadeInLeft" data-wow-delay="0.4s">
@@ -244,8 +256,8 @@
 						</div>
 					</div>
 					<div class="clearfix"> </div>
-					<!---- portfolio-works ---->
-					<div class="portfolio-works">
+					<!-- portfolio-works --> <!-- TO BE ONLY SHOWN AFTER SOME WORK DONE :) -->
+					<!-- <div class="portfolio-works">
 						<div class="col-md-4 portfolio-work-grid wow bounceIn" data-wow-delay="0.4s">
 							<div class="portfolio-work-grid-pic">
 								<img src="images/p1.jpg" title="name" />
@@ -301,10 +313,10 @@
 							</div>
 						</div>
 						<div class="clearfix"> </div>
-					</div>
+					</div> -->
 					<!---- portfolio-works ---->
 				</div>
-			</div>
+			</div> 
 			<!--- portfolio ---->
 			<!---- about ---->
 			<!---start-about---->
@@ -359,7 +371,7 @@
 					<div class="wrap"> 
 						<div class="tm-head">
 							<h3>our amazing team</h3>
-							<p>Proin iaculis purus consequat sem cure.</p>
+							<p>Passionate People never to Back Down Challenges.</p>
 						</div>
 						<div class="tm-head-grids">
 							<div class="tm-head-grid wow fadeInLeft" data-wow-delay="0.4s">
@@ -397,7 +409,7 @@
 							</div>
 							<div class="clearfix"> </div>
 						</div>
-						<p class="team-info">Proin iaculis purus consequat sem cure  digni ssim donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt proin iaculis.</p>
+						<p class="team-info">We are the one which drive our as-well-as our clients organisation with Devotion, Innovation, Passion and most important Satisfaction !</p>
 					</div>
 				</div>
 			<!---- team --->
@@ -414,13 +426,13 @@
 									<div class="contact-left-grid">
 										<p><span class="c-mobi"> </span>+91 9623039407</p>
 										<p><span class="c-twitter"> </span><a href="#">@prodevplus</a></p>
-										<p><span class="c-pluse"> </span><a href="#">plus.com/prodevplus</a></p>
+										<p><span class="c-pluse"> </span><a href="https://plus.google.com/b/117553912050631368999/117553912050631368999/about">plus.google.com/prodevplus</a></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="contact-right-grid">
 										<p><span class="c-msg"> </span><a href="mailto:hello@prodevplus.com">contact@prodevplus.com</a></p>
-										<p><span class="c-face"> </span><a href="#">facebook.com/prodevplus</a></p>
+										<p><span class="c-face"> </span><a href="https://www.facebook.com/pages/PRODEVPLUS/577213725752473">facebook.com/prodevplus</a></p>
 										<p><span class="c-pin"> </span><a href="#">pinterest.com/prodevplus</a></p>
 									</div>
 								</div>

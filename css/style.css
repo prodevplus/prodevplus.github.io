@@ -597,6 +597,7 @@ a.leran-more:hover{
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 0.93em;
+	margin-left: 0.5em;
 }
 .cbp_tmlabel p{
 	color: #777777;
@@ -604,6 +605,7 @@ a.leran-more:hover{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 0.72em;
 	margin-top: 0.8em;
+	margin-left: 0.5em;
 }
 /*--//about-time-line--*/
 /*---team-members--*/
