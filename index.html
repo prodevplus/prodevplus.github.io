@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>PRODEVPLUS | Real Productive Devlopment for Prosparity !</title>
+		<title>PRODEVPLUS | Real Productive Devlopment for Growth !</title>
 		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
@@ -10,6 +10,16 @@
 		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
 		<link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
 		<script src="js/wow.min.js"></script>
+		<script type="text/javascript" src="js/modernizr.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$(".loader").css("opacity", "1");
+				$(".loader").fadeOut("slow");
+			})
+		</script>
+		<script type="application/x-javascript"> 
+			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+		</script>
 		<script>
 		 new WOW().init();
 		</script>
@@ -21,9 +31,10 @@
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
 					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 				});
 			});
+			
 		</script>
 		 <!---- start-smoth-scrolling---->
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
@@ -68,6 +79,9 @@
 		<!----//End-top-nav-script---->
 	</head>
 	<body>
+		<div class="loader">
+			<div class="clearfix"></div>
+		</div>
 		<div class="bg">
 		<!----- start-header---->
 			<div id="home" class="header wow bounceInDown" data-wow-delay="0.4s">
@@ -462,22 +476,7 @@
 					<p> Copyright &copy; 2015. All Rights Reserved by <a href="http://www.prodevplus.com/">PRODEVPLUS</a> </p>
 					<span class="white">Crafted with care and <i class=" pink fa fa-heart fa-1x"></i> in INDIA </span>
 				<div class="clearfix"><br> </div>
-					<script type="text/javascript">
-									$(document).ready(function() {
-										/*
-										var defaults = {
-								  			containerID: 'toTop', // fading element id
-											containerHoverID: 'toTopHover', // fading element hover id
-											scrollSpeed: 1200,
-											easingType: 'linear' 
-								 		};
-										*/
-										
-										$().UItoTop({ easingType: 'easeOutQuart' });
-										
-									});
-								</script>
-									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+									
 				</div>
 				<!--- copy-right ---->
 			</div>
@@ -501,6 +500,12 @@
 		  ga('send', 'pageview');
 
 		</script>
+		<script type="text/javascript">
+				$(document).ready(function() {
+					$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+		</script>
+		<a href="#" id="toTop" style="display: block;"><span id="toTopHover" class="fa fa-arrow-circle-o-down" style="opacity: 1;"></span></a>
 	</body>
 </html>
 
